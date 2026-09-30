@@ -1,0 +1,9 @@
+{
+  "track_id": "remediation_20250911",
+  "title": "Fix portability blockers, GPU leaks, and core logic bugs",
+  "type": "bug",
+  "status": "done",
+  "created_at": "2025-09-11T00:00:00Z",
+  "updated_at": "2025-09-15T04:59:00Z",
+  "tags": ["portability", "gpu", "stt", "translation", "architecture", "testing"]
+}

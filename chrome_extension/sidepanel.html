@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>MyVoiceTranslator</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+          <line x1="12" y1="19" x2="12" y2="22"/>
+        </svg>
+        <span class="title">MyVoiceTranslator</span>
+      </div>
+      <div class="connection-status" id="connectionStatus">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-text" id="statusText">Disconnected</span>
+      </div>
+    </header>
+    
+    <!-- Live Transcription Area -->
+    <div class="live-area">
+      <div class="language-panels">
+        <div class="lang-panel en-panel">
+          <div class="lang-label">ENG</div>
+          <div class="lang-content" id="enContent">Waiting for speech...</div>
+        </div>
+        <div class="lang-panel cz-panel">
+          <div class="lang-label">CZE</div>
+          <div class="lang-content" id="czContent">Waiting for translation...</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- History -->
+    <div class="history-section">
+      <div class="section-header">
+        <h3>History</h3>
+        <button class="clear-btn" id="clearHistoryBtn">Clear</button>
+      </div>
+      <div class="history-content" id="historyContent">
+        <div class="history-empty">No transcriptions yet</div>
+      </div>
+    </div>
+    
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary" id="startBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <span>Start Capture</span>
+      </button>
+      <button class="btn btn-secondary" id="stopBtn" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="6" y="4" width="12" height="16"></rect>
+        </svg>
+        <span>Stop</span>
+      </button>
+      <button class="btn btn-danger" id="switchToTuiBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="6" height="6"></rect>
+          <path d="M5 12H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"/>
+        </svg>
+        <span>Switch to Terminal</span>
+      </button>
+    </div>
+    
+    <!-- Audio Level Indicator -->
+    <div class="audio-level" id="audioLevel" style="display: none;">
+      <div class="level-bar" id="levelBar"></div>
+      <span class="level-label">Audio Level</span>
+    </div>
+  </div>
+  
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>
