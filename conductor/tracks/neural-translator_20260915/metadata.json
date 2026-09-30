@@ -1,0 +1,9 @@
+{
+  "track_id": "neural-translator_20260915",
+  "title": "Offline Neural Machine Translation via CTranslate2 OPUS-MT",
+  "type": "feature",
+  "status": "done",
+  "created_at": "2026-09-15T05:12:00Z",
+  "updated_at": "2026-09-15T06:25:00Z",
+  "tags": ["translation", "nmt", "ctranslate2", "opus-mt", "offline", "gpu"]
+}
